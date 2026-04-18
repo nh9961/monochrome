@@ -333,6 +333,29 @@
     --explicit-badge: #df8e1d;
 }
 
+:root[data-theme='pink-pastel'] {
+    color-scheme: light;
+
+    --background: #fff0f5;
+    --foreground: #4a3040;
+    --card: #ffe4ec;
+    --card-foreground: #4a3040;
+    --primary: #e87aad;
+    --primary-foreground: #fff0f5;
+    --secondary: #f9d5e5;
+    --secondary-foreground: #5c3d50;
+    --muted: #f9d5e5;
+    --muted-foreground: #9e7a8e;
+    --border: #f0bcd0;
+    --input: #f9d5e5;
+    --ring: #e87aad;
+    --highlight: #e87aad;
+    --highlight-rgb: 232, 122, 173;
+    --active-highlight: #d4608f;
+    --explicit-badge: #c44d7b;
+    --cover-filter: blur(50px) brightness(1.4) opacity(0.35);
+}
+
 :root[data-theme='white'] {
     color-scheme: light;
 
@@ -1108,6 +1131,10 @@ ul {
 }
 
 /* Light mode adjustments */
+:root[data-theme='pink-pastel'] #page-background {
+    mask-image: linear-gradient(to bottom, rgb(0, 0, 0, 1) 0%, rgb(0, 0, 0, 0) 100%);
+}
+
 :root[data-theme='white'] #page-background {
     mask-image: linear-gradient(to bottom, rgb(0, 0, 0, 1) 0%, rgb(0, 0, 0, 0) 100%);
 }
@@ -1138,6 +1165,11 @@ ul {
     transition: all var(--transition-normal) var(--ease-out-back);
     height: var(--player-bar-height-desktop);
     animation: slide-up var(--transition-slow) var(--ease-out-back);
+}
+
+:root[data-theme='pink-pastel'] .now-playing-bar {
+    background-color: color-mix(in srgb, var(--card) 80%, transparent);
+    border-color: rgb(0, 0, 0, 0.08);
 }
 
 :root[data-theme='white'] .now-playing-bar {

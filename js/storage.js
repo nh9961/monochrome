@@ -326,6 +326,7 @@ export const themeManager = {
         macchiato: {},
         frappe: {},
         latte: {},
+        pinkPastel: {},
     },
 
     getTheme() {
